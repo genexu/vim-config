@@ -1,6 +1,7 @@
 syntax on
 
 set history=100
+set laststatus=2
 
 set tabstop=4
 set softtabstop=4
@@ -26,6 +27,8 @@ Plugin 'honza/vim-snippets'
 
 " Interface
 Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
