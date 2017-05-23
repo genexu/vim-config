@@ -18,7 +18,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" General
+" Completion
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
