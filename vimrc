@@ -24,5 +24,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
+" Interface
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
