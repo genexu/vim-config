@@ -30,5 +30,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Language
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'othree/html5.vim'
+Plugin 'fatih/vim-go'
+Plugin 'elzr/vim-json'
+Plugin 'plasticboy/vim-markdown'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
