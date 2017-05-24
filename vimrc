@@ -19,6 +19,9 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+" General
+Plugin 'kien/ctrlp.vim'
+
 " Completion
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
