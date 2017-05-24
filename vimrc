@@ -21,6 +21,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " General
 Plugin 'kien/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
 
 " Completion
 Plugin 'MarcWeber/vim-addon-mw-utils'
