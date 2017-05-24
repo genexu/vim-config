@@ -43,3 +43,6 @@ Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
