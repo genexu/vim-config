@@ -3,8 +3,8 @@ syntax on
 set history=100
 set laststatus=2
 
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set expandtab
 
 set cursorline
