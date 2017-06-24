@@ -3,9 +3,18 @@ syntax on
 set history=100
 set laststatus=2
 
-set tabstop=2
-set softtabstop=2
+set autoindent
+set copyindent
+set tabstop=4
+set softtabstop=4
 set expandtab
+set shiftwidth=4
+set smarttab
+set shiftround
+set ignorecase
+set smartcase
+
+set autoread
 
 set cursorline
 set ruler
