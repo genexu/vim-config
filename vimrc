@@ -1,14 +1,21 @@
 syntax on
 
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical Bar In Insert Mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block In Normal Mode
+endif
+
+set mouse=a
+
 set history=100
 set laststatus=2
 
 set autoindent
 set copyindent
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set smarttab
 set shiftround
 set ignorecase
