@@ -40,6 +40,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'easymotion/vim-easymotion'
 
 " Completion
+Plugin 'valloric/youcompleteme'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -62,4 +63,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
