@@ -58,6 +58,8 @@ Plugin 'othree/html5.vim'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'oranget/vim-csharp'
+Plugin 'posva/vim-vue'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
