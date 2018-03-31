@@ -60,6 +60,8 @@ Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'oranget/vim-csharp'
 Plugin 'posva/vim-vue'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'ianks/vim-tsx'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
