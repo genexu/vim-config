@@ -37,6 +37,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " General
 Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'easymotion/vim-easymotion'
 
 " Completion
@@ -71,3 +72,7 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+let g:ctrlp_funky_syntax_highlight = 1
