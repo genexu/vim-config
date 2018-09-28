@@ -6,6 +6,7 @@ if $TERM_PROGRAM =~ "iTerm"
 endif
 
 set mouse=a
+set backspace=indent,eol,start
 
 set history=100
 set laststatus=2
@@ -27,6 +28,9 @@ set cursorline
 set ruler
 set wildmenu
 
+set nu
+set updatetime=100
+
 set nocompatible              " be improved, required
 filetype off                  " required
 
@@ -36,9 +40,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " General
+Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'airblade/vim-gitgutter'
 
 " Completion
 Plugin 'valloric/youcompleteme'
