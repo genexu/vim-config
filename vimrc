@@ -37,6 +37,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+set backspace=indent,eol,start
+
 Plugin 'VundleVim/Vundle.vim'
 
 " General
