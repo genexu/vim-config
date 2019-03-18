@@ -8,6 +8,7 @@ endif
 set mouse=a
 set backspace=indent,eol,start
 
+set encoding=utf-8
 set history=100
 set laststatus=2
 
