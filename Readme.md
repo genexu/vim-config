@@ -1,36 +1,28 @@
 # Vim Config
 
-## Setup
+## Vim Version
+Make sure your vim is updated.
+https://github.com/vim/vim/releases
 
+## Setup
 ```bash
 ~$ git clone https://github.com/genexu/vim-config.git
 ~$ cd vim-config
 ~$ bash ./setup.sh
 ```
 
-## Plugin List
-### Plugin Mananger
-- Vundle
+## Setup YCM (Mac)
+Ref: https://github.com/Valloric/YouCompleteMe
 
-### General
-- ctrlp
-- EasyMotion
+### Requirement
+- [CMake](https://cmake.org/download/)
 
-### Complettion
-- zavim-addon-mw-utils
-- tlib_vim
-- vim-snipmate
-- vim-snippets
+### Setup CMake Path
+```bash
+~$ echo 'export CMAKE_ROOT="/Applications/CMake.app"' >> ~/.bash_profile
+~$ echo 'export PATH="$CMAKE_ROOT/Contents/bin:$PATH"' >> ~/.bash_profile
+```
 
-### Interface
-- nerdtree
-- vim-airline
-- vim-airline-themes
-
-### Languge
-- vim-javascript
-- vim-jax
-- html5
-- vim-go
-- vim-json
-- vim-markdown
+``` bash
+~$ ~/.vim/bundle/youcompleteme/install.py
+```
