@@ -86,3 +86,5 @@ nnoremap <Leader>fu :CtrlPFunky<Cr>
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 let g:ctrlp_funky_syntax_highlight = 1
+
+let NERDTreeShowHidden=1
