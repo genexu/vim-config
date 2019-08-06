@@ -73,6 +73,7 @@ Plugin 'oranget/vim-csharp'
 Plugin 'posva/vim-vue'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ianks/vim-tsx'
+Plugin 'martinda/jenkinsfile-vim-syntax'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
