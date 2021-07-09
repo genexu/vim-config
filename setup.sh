@@ -1,6 +1,8 @@
 #!/bin/sh
 
 VIMRC_DIR="$HOME/.vimrc"
+VIM_AUTOLOAD_DIR="$HOME/.vim/autoload"
+VIM_BUNDLE_DIR="$HOME/.vim/bundle"
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -22,11 +24,26 @@ fi
 echo "Create symbolic link from vim-config repo vimrc file to home directory."
 ln -s "$SCRIPT_DIR"/vimrc ~/.vimrc
 
-
 if [ ! -d "$VUNDLE_DIR" ]; then
-    echo "install and setup vundle"
+    echo "Install and setup vundle"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
+
+if [ ! -d "$VIM_AUTOLOAD_DIR" ]; then
+    echo "Make vim autoload dir"
+    mkdir $VIM_AUTOLOAD_DIR
+fi
+
+if [ ! -d "$VIM_BUNDLE_DIR" ]; then
+    echo "Make vim bundle dir"
+    mkdir $VIM_AUTOLOAD_DIR
+fi
+
+echo "Install and setup pathogen runtimepath executor"
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+echo "Install and setup color theme"
+git clone https://github.com/joshdick/onedark.vim.git ~/.vim/bundle/onedark.vim
 
 vim +PluginInstall +qall
 

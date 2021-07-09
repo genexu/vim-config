@@ -1,91 +1,128 @@
-syntax on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
 
-if $TERM_PROGRAM =~ "iTerm"
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical Bar In Insert Mode
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block In Normal Mode
-endif
-
+" Set mouse mode
 set mouse=a
-set backspace=indent,eol,start
 
-set encoding=utf-8
-set history=100
-set laststatus=2
+" Set read lines history
+set history=500
 
-set autoindent
-set copyindent
-set tabstop=2
-set softtabstop=2
-set expandtab
-set shiftwidth=2
-set smarttab
-set shiftround
+" Set to auto read watch file changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime
+
+" Turn on the wild menu and set wildignore file type
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Show status bar position ruler and cursorline
+set ruler
+set cursorline
+
+" Backspace configuration
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Searching case configuration
 set ignorecase
 set smartcase
+set nohlsearch
+set incsearch 
 
-set autoread
+" Disable redraw while executing macros and ture off compatible mode (performance improvement)
+set lazyredraw 
+set nocompatible
 
-set cursorline
-set ruler
-set wildmenu
+" For regular expressions turn magic on
+set magic
 
-set nu
+" No sound on errors
+set noerrorbells
+set novisualbell
+set tm=500
+
 set updatetime=100
 
-set nocompatible              " be improved, required
-filetype off                  " required
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors, Fonts and Encoding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
 
+set encoding=utf8
+set background=dark
+set fileformats=unix,dos,mac
+colorscheme onedark
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nobackup
+set nowb
+set noswapfile
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set expandtab
+set smarttab
+
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+
+set autoindent
+set smartindent
+set wrap
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-set backspace=indent,eol,start
-
 Plugin 'VundleVim/Vundle.vim'
 
-" General
-Plugin 'mattn/emmet-vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'airblade/vim-gitgutter'
+" Git
+Plugin 'tpope/vim-fugitive'
 
-" Completion
-Plugin 'valloric/youcompleteme'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+" Tools
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Searching
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Interface
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mhinz/vim-signify'
+
+" Theme
+Plugin 'joshdick/onedark.vim'
 
 " Language
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'othree/html5.vim'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'oranget/vim-csharp'
-Plugin 'posva/vim-vue'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'ianks/vim-tsx'
 Plugin 'martinda/jenkinsfile-vim-syntax'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
-
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
-
-let g:ctrlp_funky_syntax_highlight = 1
+call vundle#end()
 
 let NERDTreeShowHidden=1
+let g:jsx_ext_required = 0
