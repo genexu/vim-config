@@ -48,7 +48,8 @@ set noerrorbells
 set novisualbell
 set tm=500
 
-set updatetime=100
+set nofoldenable
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors, Fonts and Encoding
@@ -96,9 +97,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Git
 Plugin 'tpope/vim-fugitive'
 
-" Tools
-Plugin 'nathanaelkane/vim-indent-guides'
-
 " Searching
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
@@ -107,7 +105,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mhinz/vim-signify'
 
 " Theme
 Plugin 'joshdick/onedark.vim'
