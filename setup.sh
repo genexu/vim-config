@@ -36,7 +36,7 @@ fi
 
 if [ ! -d "$VIM_BUNDLE_DIR" ]; then
     echo "Make vim bundle dir"
-    mkdir $VIM_AUTOLOAD_DIR
+    mkdir $VIM_BUNDLE_DIR
 fi
 
 echo "Install and setup pathogen runtimepath executor"
