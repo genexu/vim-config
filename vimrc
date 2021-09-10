@@ -89,43 +89,37 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-" Git
-Plugin 'tpope/vim-fugitive'
-
-" Searching
-Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-
-" Interface
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" Theme
-Plugin 'joshdick/onedark.vim'
-
-" Language
-Plugin 'pangloss/vim-javascript'
-Plugin 'chemzqm/vim-jsx-improve'
-Plugin 'othree/html5.vim'
-Plugin 'fatih/vim-go'
-Plugin 'elzr/vim-json'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'oranget/vim-csharp'
-Plugin 'martinda/jenkinsfile-vim-syntax'
-
-call vundle#end()
-
 call plug#begin('~/.vim/plugged')
 
+" Linter
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+" Git
+Plug 'tpope/vim-fugitive'
+
+" Searching
+Plug 'mileszs/ack.vim'
+Plug 'kien/ctrlp.vim'
+
+" Interface
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Theme
+Plug 'joshdick/onedark.vim'
+
+" Language
+Plug 'pangloss/vim-javascript'
+Plug 'chemzqm/vim-jsx-improve'
+Plug 'othree/html5.vim'
+Plug 'fatih/vim-go'
+Plug 'elzr/vim-json'
+Plug 'plasticboy/vim-markdown'
+Plug 'oranget/vim-csharp'
+Plug 'martinda/jenkinsfile-vim-syntax'
 
 " Initialize plugin system
 call plug#end()
