@@ -42,9 +42,14 @@ fi
 echo "Install and setup pathogen runtimepath executor"
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+echo "Install and setup vim-plug plugin manager"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo "Install and setup color theme"
 git clone https://github.com/joshdick/onedark.vim.git ~/.vim/bundle/onedark.vim
 
 vim +PluginInstall +qall
+vim +PlugInstall +qall
 
 echo "Setup done. If you want to change vim-config repo directory, please remember relink vimrc again."

@@ -121,5 +121,19 @@ Plugin 'martinda/jenkinsfile-vim-syntax'
 
 call vundle#end()
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+" Initialize plugin system
+call plug#end()
+
 let NERDTreeShowHidden=1
 let g:jsx_ext_required = 0
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
