@@ -48,8 +48,9 @@ set noerrorbells
 set novisualbell
 set tm=500
 
-set nofoldenable
+set updatetime=500
 
+set foldmethod=indent
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors, Fonts and Encoding
@@ -57,7 +58,7 @@ set nofoldenable
 " Enable syntax highlighting
 syntax enable
 
-set encoding=utf8
+set encoding=UTF-8
 set background=dark
 set fileformats=unix,dos,mac
 colorscheme onedark
@@ -101,6 +102,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Searching
 Plug 'mileszs/ack.vim'
@@ -110,6 +112,11 @@ Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mhinz/vim-startify'
+Plug 'xuyuanp/nerdtree-git-plugin'
+
+Plug 'tmhedberg/simpylfold'
+Plug 'tpope/vim-commentary'
 
 " Theme
 Plug 'joshdick/onedark.vim'
