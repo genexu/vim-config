@@ -39,6 +39,9 @@ if [ ! -d "$VIM_BUNDLE_DIR" ]; then
     mkdir $VIM_BUNDLE_DIR
 fi
 
+echo "Create symbolic link from vim-config repo coc-settings.json file to vim directory."
+ln -s "$SCRIPT_DIR"/coc-settings.json "VIM_DIR"/coc-settings.json
+
 echo "Install and setup pathogen runtimepath executor"
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
@@ -50,5 +53,6 @@ echo "Install and setup color theme"
 git clone https://github.com/joshdick/onedark.vim.git ~/.vim/bundle/onedark.vim
 
 vim +PlugInstall +qall
+vim +CocInstall coc-json coc-tsserver +qall
 
 echo "Setup done. If you want to change vim-config repo directory, please remember relink vimrc again."
